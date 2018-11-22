@@ -12,6 +12,7 @@ let computerPoints;
 let round;
 let roundInfoText;
 let playerNumber;
+let computerNumber;
 
 function prepareGame() {
 
@@ -66,3 +67,38 @@ function playerMove(move) {
 	}
 }
 
+function computerMove() {
+
+	let move;
+
+	while(computerMoveHTML.firstChild) {
+    		computerMoveHTML.removeChild(computerMoveHTML.firstChild);
+	}
+
+	move = Math.floor(Math.random()*3+1);
+
+
+	if(move == 1) {
+		let moveIcon = document.createElement("i");
+		moveIcon.classList.add('far', 'fa-hand-paper', 'v-b-ikon');
+		computerMoveHTML.appendChild(moveIcon);
+		computerNumber = 1;
+	}
+	if(move == 2) {
+		let moveIcon = document.createElement("i");
+		moveIcon.classList.add('far', 'fa-hand-rock', 'v-b-ikon');
+		computerMoveHTML.appendChild(moveIcon);
+		computerNumber = 2;
+	}
+	if(move == 3) {
+		let moveIcon = document.createElement("i");
+		moveIcon.classList.add('far', 'fa-hand-scissors', 'v-b-ikon');
+		computerMoveHTML.appendChild(moveIcon);
+		computerNumber = 3;
+	}
+}
+
+function move (move) {
+	playerMove(move);
+	computerMove();
+}
