@@ -3,6 +3,8 @@ const playerPointsHTML = document.getElementById("player-points");
 const computerPointsHTML = document.getElementById("computer-points");
 const roundHTML = document.getElementById("round");
 const roundInfoHTML = document.getElementById("round-info");
+const playerMoveHTML = document.getElementById("player-move");
+const computerMoveHTML = document.getElementById("computer-move");
 
 let numberOfRounds;
 let playerPoints;
@@ -26,5 +28,13 @@ function prepareGame() {
 		roundHTML.innerHTML = round;
 		roundInfoText = "";
 		roundInfoHTML.innerHTML = roundInfoText;
+
+		while (playerMoveHTML.firstChild) {
+    		playerMoveHTML.removeChild(playerMoveHTML.firstChild);
+		}
+
+		while (computerMoveHTML.firstChild) {
+    		computerMoveHTML.removeChild(computerMoveHTML.firstChild);
+		}
 	}
 }
