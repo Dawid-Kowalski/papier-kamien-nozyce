@@ -155,8 +155,15 @@ function checkEndGame() {
 			startGame = false;
 		}
 		if(playerPoints < computerPoints){
-			alert("KOniec gry - komputer wygrywa");
+			alert("Koniec gry - komputer wygrywa");
 			startGame = false;
 		}
+	numberOfRoundsHTML.disabled = false;
 	}
+}
+
+function endGame() {
+	numberOfRoundsHTML.disabled = false;
+	startGame = false;
+	alert("Koniec gry - gra przerwana");
 }
