@@ -11,6 +11,7 @@ let playerPoints;
 let computerPoints;
 let round;
 let roundInfoText;
+let playerNumber;
 
 function prepareGame() {
 
@@ -38,3 +39,30 @@ function prepareGame() {
 		}
 	}
 }
+
+function playerMove(move) {
+
+	while(playerMoveHTML.firstChild) {
+    		playerMoveHTML.removeChild(playerMoveHTML.firstChild);
+	}
+
+	if(move == 1) {
+		let moveIcon = document.createElement("i");
+		moveIcon.classList.add('far', 'fa-hand-paper', 'v-b-ikon');
+		playerMoveHTML.appendChild(moveIcon);
+		playerNumber = 1;
+	}
+	if(move == 2) {
+		let moveIcon = document.createElement("i");
+		moveIcon.classList.add('far', 'fa-hand-rock', 'v-b-ikon');
+		playerMoveHTML.appendChild(moveIcon);
+		playerNumber = 2;
+	}
+	if(move == 3) {
+		let moveIcon = document.createElement("i");
+		moveIcon.classList.add('far', 'fa-hand-scissors', 'v-b-ikon');
+		playerMoveHTML.appendChild(moveIcon);
+		playerNumber = 3;
+	}
+}
+
