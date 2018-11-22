@@ -13,6 +13,7 @@ let round;
 let roundInfoText;
 let playerNumber;
 let computerNumber;
+let startGame = false;
 
 function prepareGame() {
 
@@ -38,6 +39,8 @@ function prepareGame() {
 		while (computerMoveHTML.firstChild) {
     		computerMoveHTML.removeChild(computerMoveHTML.firstChild);
 		}
+
+		startGame = true;
 	}
 }
 
@@ -99,10 +102,15 @@ function computerMove() {
 }
 
 function move (move) {
-	playerMove(move);
-	computerMove();
-	countResult();
-	checkEndGame();
+
+	if(startGame == true){
+		playerMove(move);
+		computerMove();
+		countResult();
+		checkEndGame();
+	} else {
+		alert("nie rozpoczęto nowej gry");
+	}
 }
 
 function countResult() {
@@ -140,12 +148,15 @@ function checkEndGame() {
 	if(round == parseInt(numberOfRoundsHTML.value)){
 		if(playerPoints == computerPoints){
 			alert("Koniec gry - remis");
+			startGame = false;
 		}
 		if(playerPoints > computerPoints){
 			alert("Koniec gry - gracz wygrywa");
+			startGame = false;
 		}
 		if(playerPoints < computerPoints){
 			alert("KOniec gry - komputer wygrywa");
+			startGame = false;
 		}
 	}
 }
