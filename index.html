@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -26,20 +25,27 @@
 					<i class="far fa-hand-scissors border b-ikon"></i>
 				</div>
 				<div class="col-md-3">
-					<button type="button" class="btn btn-primary btn-block">nowa gra</button>
-					<select class="form-control m-3">
-						<option>ilość rund</option>
-						<option>3</option>
-						<option>5</option>
-						<option>7</option>
-						<option>10</option>
-						<option>15</option>
+					<button type="button" class="btn btn-primary btn-block" onclick="prepareGame();">nowa gra</button>
+					<h4 class="text-center">Ilość rund:</h4>
+					<select class="form-control m-3" id="number-of-rounds">
+						<option value="0">ilość rund</option>
+						<option value="3">3</option>
+						<option value="5">5</option>
+						<option value="7">7</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
 					</select>
 					<h4 class="text-center">Punkty:</h4>
-					<h5>Gracza: </h5>
-					<h5>Komputera: </h5>
+					<div>
+						<h5 class="inline">Gracza: </h5>
+						<h5 class="inline" id="player-points">0</h5>
+					</div>
+					<div>
+						<h5 class="inline">Komputera: </h5>
+						<h5 class="inline" id="computer-points">0</h5>
+					</div>
 					<h4 class="text-center">Runda:</h4>
-					<h5 class="text-center">0</h5>
+					<h5 class="text-center" id="round">0</h5>
 				</div>
 			</div>
 			<div class="row text-center m-3">
@@ -64,9 +70,10 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<textarea class="form-control m-3" rows="15" disabled>Runda: 1 Wygrana: Gracz</textarea>
+					<textarea class="form-control m-3" id="round-info" rows="15" disabled>Runda: 1 Wygrana: Gracz</textarea>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>

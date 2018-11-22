@@ -35,4 +35,8 @@ body {
   transform: translate(0, -50%);
 }
 
+.inline {
+  display: inline;
+}
+
 /*# sourceMappingURL=style.css.map */
