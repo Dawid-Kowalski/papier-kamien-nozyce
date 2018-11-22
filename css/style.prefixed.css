@@ -1,5 +1,6 @@
 body {
   background-color: green;
+  color: white;
 }
 
 .border {
@@ -7,8 +8,11 @@ body {
 }
 
 .b-ikon {
-  background-color: white;
-  font-size: 17em;
+  background-color: silver;
+  border: 3px solid black;
+  color: black;
+  font-size: 15em;
+  padding: 10px;
 }
 
 .m-3 {
@@ -17,6 +21,7 @@ body {
 
 .v-b-ikon {
   background-color: green;
+  color: black;
   font-size: 25em;
 }
 
