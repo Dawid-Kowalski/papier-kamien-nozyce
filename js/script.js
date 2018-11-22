@@ -101,4 +101,36 @@ function computerMove() {
 function move (move) {
 	playerMove(move);
 	computerMove();
+	countResult();
+}
+
+function countResult() {
+
+	let newResult ="\n";
+
+	if(playerNumber == computerNumber){
+		round++;
+		roundHTML.innerHTML = round;
+		newResult += round + " Runda zakończona remisem";
+		roundInfoHTML.innerHTML += newResult;
+		alert("Remis");
+	}
+	if(playerNumber == 2 && computerNumber == 1 || playerNumber == 3 && computerNumber == 2 || playerNumber == 1 && computerNumber == 3){
+		computerPoints++;
+		computerPointsHTML.innerHTML = computerPoints;
+		round++;
+		roundHTML.innerHTML = round;
+		newResult += round + " Runda zakończona wygraną komputera";
+		roundInfoHTML.innerHTML += newResult;
+		alert("Komputer wygrywa runde");
+	}
+	if(playerNumber == 3 && computerNumber == 1 || playerNumber == 1 && computerNumber == 2 || playerNumber == 2 && computerNumber == 3){
+		playerPoints++
+		playerPointsHTML.innerHTML = playerPoints;
+		round++;
+		roundHTML.innerHTML = round;
+		newResult += round + " Runda zakończona wygraną gracza";
+		roundInfoHTML.innerHTML += newResult;
+		alert("Gracz wygrywa runde");
+	}
 }
