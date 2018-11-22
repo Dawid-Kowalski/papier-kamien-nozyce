@@ -102,6 +102,7 @@ function move (move) {
 	playerMove(move);
 	computerMove();
 	countResult();
+	checkEndGame();
 }
 
 function countResult() {
@@ -132,5 +133,19 @@ function countResult() {
 		newResult += round + " Runda zakończona wygraną gracza";
 		roundInfoHTML.innerHTML += newResult;
 		alert("Gracz wygrywa runde");
+	}
+}
+
+function checkEndGame() {
+	if(round == parseInt(numberOfRoundsHTML.value)){
+		if(playerPoints == computerPoints){
+			alert("Koniec gry - remis");
+		}
+		if(playerPoints > computerPoints){
+			alert("Koniec gry - gracz wygrywa");
+		}
+		if(playerPoints < computerPoints){
+			alert("KOniec gry - komputer wygrywa");
+		}
 	}
 }
