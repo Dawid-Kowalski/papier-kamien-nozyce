@@ -1,47 +1,15 @@
-body {
-  background-color: green;
-  color: white;
-}
+body { background-color: green; color: white; }
 
-.border {
-  border: 1px solid black;
-}
+.border { border: 1px solid black; }
 
-.b-ikon {
-  background-color: silver;
-  border: 3px solid black;
-  color: black;
-  font-size: 15em;
-  padding: 10px;
-}
+.b-ikon { background-color: silver; border: 3px solid black; color: black; font-size: 15em; padding: 10px; }
 
-.m-3 {
-  margin: 2em 0 0 0;
-}
+.m-3 { margin: 2em 0 0 0; }
 
-.v-b-ikon {
-  background-color: green;
-  color: black;
-  font-size: 25em;
-}
+.v-b-ikon { background-color: green; color: black; font-size: 25em; }
 
-.icon-cont {
-  height: 25em;
-  position: relative;
-}
+.icon-cont { height: 25em; position: relative; }
 
-.s-ikon {
-  color: white;
-  font-size: 5em;
-  margin: 0;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(0, -50%);
-}
+.s-ikon { color: white; font-size: 5em; margin: 0; position: absolute; text-align: center; top: 50%; transform: translate(0, -50%); }
 
-.inline {
-  display: inline;
-}
-
-/*# sourceMappingURL=style.css.map */
+.inline { display: inline; }
